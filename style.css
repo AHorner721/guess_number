@@ -2,6 +2,10 @@ body{
     background-color: black;
 }
 
+h2{
+    text-decoration: underline;
+}
+
 .container{
     background-color: lightgrey;
     border: 3px lightgray;
@@ -12,4 +16,13 @@ body{
     width: 50%;
     max-width: 500px;
     min-width: 400px;
+}
+
+.label{
+    font-weight: bold;
+}
+
+.lastResult{
+    color: white;
+    padding: 3px;
 }
