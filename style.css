@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+
+.container{
+    background-color: lightgrey;
+    border: 3px lightgray;
+    border-radius: 25px;
+    padding: 3em;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    max-width: 500px;
+    min-width: 400px;
+}
