@@ -1,12 +1,9 @@
 
-// define variables
-// Math.floor - rounds down to the nearest integer
-// Math.random - picks a number between 0 and 1 not including 1.
-// randomNumber = a random number (i.e. 0.6543) multi by 100, plus 1 for range to include 100.
+// guess number implementation
+
 let randomNumber = Math.floor(Math.random() * 100) +1;
 
-// document = HTML document object utlizing DOM
-// .querySelector - uses CSS .rule attribute to access specific parts of document object 
+//  get user guesses
 const guesses = document.querySelector('.guesses');
 const lastResult = document.querySelector('.lastResult');
 const loworhi = document.querySelector('.loworhi');
@@ -17,8 +14,6 @@ const guessField = document.querySelector('.guess');
 let guessCount = 1;
 let resetButton;
 
-
-//declare funtions
 function checkGuess(){
     // convert user string input value to integer using Number()
     let userGuess = Number(guessField.value);
@@ -55,10 +50,11 @@ function checkGuess(){
 }
 
 function setGameOver(){
-    guessField.disabled = true; // CSS reps disabled element, (can't be activated)
+    guessField.disabled = true; // CSS element can't be activated
     guessSubmit.disabled = true;
     resetButton = document.createElement('button');
     resetButton.textContent = 'Start new game?';
+    resetButton.classList.add('resetButton');
     document.querySelector('.container').appendChild(resetButton);
     resetButton.addEventListener('click', resetGame);
 }
@@ -82,5 +78,5 @@ function resetGame(){
     randomNumber = Math.floor(Math.random() * 100) + 1;
 }
 
-//Event handling
+//Event handling for submit button
 guessSubmit.addEventListener('click', checkGuess);
